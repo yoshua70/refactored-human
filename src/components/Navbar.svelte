@@ -3,27 +3,20 @@
   import { writable } from "svelte/store";
   import "iconify-icon";
 
-  const darkMode = writable(false);
   let isMenuOpen = false;
-
-  onMount(() => {
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
-    darkMode.set(isDarkMode);
-  });
-
-  $: {
-    localStorage.setItem("darkMode", darkMode.toString());
-    const body = document.querySelector("body");
-    if ($darkMode) {
-      body.classList.add("dark");
-    } else {
-      body.classList.remove("dark");
-    }
-  }
 
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
   }
+
+  // let darkMode = true;
+  // function handleSwitchDarkMode() {
+  //   darkMode = !darkMode;
+
+  //   darkMode
+  //     ? document.documentElement.classList.add("dark")
+  //     : document.documentElement.classList.remove("dark");
+  // }
 
   console.log(isMenuOpen);
 </script>
@@ -43,9 +36,9 @@
         </li>
       </ul>
     </div>
-    <div class="flex items-center">
-      <button class="btn" on:click={() => ($darkMode = !$darkMode)}>
-        {#if $darkMode}
+    <!-- <div class="flex items-center">
+      <button class="btn" on:click={handleSwitchDarkMode}>
+        {#if darkMode}
           <iconify-icon icon="material-symbols-light:light-mode-outline-rounded"
           ></iconify-icon>
         {:else}
@@ -53,8 +46,8 @@
           ></iconify-icon>
         {/if}
       </button>
-    </div>
-    <button class="md:hidden" on:click={toggleMenu}>
+    </div> -->
+    <button class="btn md:hidden" on:click={toggleMenu}>
       {#if !isMenuOpen}
         <iconify-icon
           icon="material-symbols-light:menu-rounded"
