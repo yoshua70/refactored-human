@@ -33,7 +33,7 @@
         <li><a href="/blog" class="btn btn-ghost">Blog</a></li>
         <li>
           <a
-            href="https://github.com/yoshua70.git"
+            href="https://github.com/yoshua70"
             target="_blank"
             class="btn btn-ghost">Sources</a
           >
