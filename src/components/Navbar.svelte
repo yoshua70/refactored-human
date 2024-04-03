@@ -26,13 +26,17 @@
 >
   <div class="flex w-full items-center justify-between">
     <div class="flex items-center">
-      <a href="/" class="font-bold">Refactored<br />Human</a>
+      <a href="/" class="font-bold btn btn-ghost">Refactored<br />Human</a>
       <ul class="hidden md:flex ml-4 space-x-4">
-        <li><a href="/work">Works</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/blog">Blog</a></li>
+        <li><a href="/work" class="btn btn-ghost">Works</a></li>
+        <li><a href="/projects" class="btn btn-ghost">Projects</a></li>
+        <li><a href="/blog" class="btn btn-ghost">Blog</a></li>
         <li>
-          <a href="https://github.com/yoshua70.git" target="_blank">Sources</a>
+          <a
+            href="https://github.com/yoshua70.git"
+            target="_blank"
+            class="btn btn-ghost">Sources</a
+          >
         </li>
       </ul>
     </div>
