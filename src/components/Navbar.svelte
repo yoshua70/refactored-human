@@ -33,7 +33,7 @@
 >
   <div class="flex w-full items-center justify-between">
     <div class="flex items-center">
-      <a href="/">Refactored<br />Human</a>
+      <a href="/" class="font-bold">Refactored<br />Human</a>
       <ul class="hidden md:flex ml-4 space-x-4">
         <li><a href="/work">Works</a></li>
         <li><a href="/projects">Projects</a></li>
