@@ -44,20 +44,28 @@
       </ul>
     </div>
     <div class="flex items-center">
-      <button on:click={() => ($darkMode = !$darkMode)}>
+      <button class="btn" on:click={() => ($darkMode = !$darkMode)}>
         {#if $darkMode}
-          Light Mode
+          <iconify-icon icon="material-symbols-light:light-mode-outline-rounded"
+          ></iconify-icon>
         {:else}
-          Dark Mode
+          <iconify-icon icon="material-symbols-light:dark-mode-outline-rounded"
+          ></iconify-icon>
         {/if}
       </button>
     </div>
     <button class="md:hidden" on:click={toggleMenu}>
       {#if !isMenuOpen}
-        <iconify-icon icon="mynaui:menu" width="1.5rem" height="1.5rem"
+        <iconify-icon
+          icon="material-symbols-light:menu-rounded"
+          width="1.5rem"
+          height="1.5rem"
         ></iconify-icon>
       {:else}
-        <iconify-icon icon="akar-icons:cross" width="1.5rem" height="1.5rem"
+        <iconify-icon
+          icon="material-symbols-light:close-rounded"
+          width="1.5rem"
+          height="1.5rem"
         ></iconify-icon>
       {/if}
     </button>
